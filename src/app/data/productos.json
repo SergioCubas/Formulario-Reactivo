@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,
+    "nombre": "manzana",
+    "category": 1,
+    "precio":10.50,
+    "descuento":[
+      {
+        "valor":10
+      }
+    ],
+    "imagen": "https://pickbazar-react.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F1%2FApples.jpg&w=3840&q=75"
+  },
+  {
+    "id":2,
+    "nombre": "Pera",
+    "category": 2,
+    "precio":2.50,
+    "descuento":[
+      {
+        "valor":10
+      }
+    ],
+    "imagen": "https://pickbazar-react.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F16%2Fpears.jpg&w=3840&q=75"
+  }
+]

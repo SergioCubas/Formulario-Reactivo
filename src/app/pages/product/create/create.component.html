@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-3">
+      <form class="was-validated" [formGroup]="frmAddProduct" (ngSubmit)="createProduct()">
+        <div class="form-row">
+          
+          <div class="form-group col-xl-12  mb-4" >
+            <label   for="inputEmail4">Nombre</label>
+            <input type="text" class="form-control" placeholder="Ingrese nombre del producto..." formControlName="name" required>
+    
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">El nombre es requerido.</div>
+            </div>
+    
+          </div>
+    
+          <div class="form-group  mb-4">
+            <label for="exampleFormControlSelect1">Categoria</label>
+            <select class="form-control" id="exampleFormControlSelect1" formControlName="category">
+              <option value="Frutas">Frutas</option>
+              <option value="Carnes">Carnes</option>
+              <option value="Limpieza Hogar">Limpieza Hogar</option>
+              <option value="Lacteos">Lacteos</option>
+            </select>
+
+          </div>
+    
+          <div class="form-group col-xl-12 mb-4">
+            <label for="inputPassword4">Precio</label>
+            <input type="number" class="form-control" placeholder="Ingrese precio del precio..." formControlName="price" required>
+
+            <div *ngIf="f['price'].touched && f['price'].invalid" class="alert alert-danger">
+              <div *ngIf="f['price'].errors && f['price'].errors['required']">El precio es requerido.</div>
+            </div>
+          </div>
+    
+          <div class="form-group col-xl-12  mb-4" >
+            <label   for="inputEmail4">URL imagen</label>
+            <input type="text" class="form-control" placeholder="Ingrese url del producto..." formControlName="image" required>
+
+            <div *ngIf="f['image'].touched && f['image'].invalid" class="alert alert-danger">
+              <div *ngIf="f['image'].errors && f['image'].errors['required']">La imagen es requerido.</div>
+            </div>
+          </div>
+    
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Crear producto</button>
+    </form>
+    
+    </div>
+    
+    <div class="col-xl-9">
+      <div class="container-fluid p-0">
+        <div class="row p-0">
+          <div class="col-xl-4" *ngFor="let product of products">
+              <div class="card">
+                <div class="card-body">
+                  <img class="img-fluid" [src]="product.image" alt="">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="card-subtitle mb-2 text-muted">{{product.category}}</p>
+                  <h5 class="card-text">S/. {{product.price}}</h5>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </div>
+</div>

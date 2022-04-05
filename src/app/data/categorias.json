@@ -1,0 +1,22 @@
+[
+  {
+    "id":1,
+    "nombre": "Frutas"
+  },
+  {
+    "id":2,
+    "nombre": "Carnes"
+  },
+  {
+    "id":3,
+    "nombre": "Limpieza Hogar"
+  },
+  {
+    "id":4,
+    "nombre": "Lacteos"
+  },
+  {
+    "id":5,
+    "nombre": "Bebidas"
+  }
+]
